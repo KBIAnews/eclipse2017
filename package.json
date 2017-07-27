@@ -1,0 +1,19 @@
+{
+  "name": "kbia-interactives",
+  "version": "1.0.0",
+  "description": "KBIA's Interactives bakery.",
+  "main": "gruntfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-uglify": "^2.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "matchdep": "^1.0.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Nathan Lawrence",
+  "license": "MIT"
+}

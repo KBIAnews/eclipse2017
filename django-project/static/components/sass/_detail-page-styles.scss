@@ -1,0 +1,143 @@
+div.page-segment{
+
+  p{
+    font-size: 1.2rem;
+    line-height: 1.2em;
+    color: $gray-light;
+
+    &:not(:first-of-type){
+      margin-top: 0.5rem;
+    }
+
+    @media screen and (max-width: $medium-screen-width) {
+      @include clearfix;
+      font-size: 1rem;
+    }
+  }
+
+  p.title{
+    color: lighten($gray-light, 20%);
+  }
+
+  h1{
+    font-size: 3.5rem;
+    padding-bottom: 0.3em;
+
+    @media screen and (max-width: $medium-screen-width) {
+      font-size: 2.5rem;
+    }
+
+    @media screen and (max-width: $small-screen-width) {
+      padding-top: 1rem;
+      font-size: 2.2rem;
+    }
+
+    @media screen and (max-width: $tiny-screen-width) {
+      padding-top: 0rem;
+      font-size: 2.0rem;
+
+      &:after{
+        padding-top: 8px;
+      }
+    }
+
+
+    &:after{
+      display: table;
+      width:120px;
+      padding-top: 10px;
+      border-bottom: 6px solid $project-primary;
+      content: "";
+    }
+  }
+
+  div.description{
+    a {
+      color: $project-primary;
+      text-decoration: none;
+      &:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+
+}
+
+h2{
+  color: lighten($gray-light, 20);
+  font-size: 1rem;
+  text-transform: uppercase;
+  &:after{
+    display: table;
+    width: 100%;
+    padding-top: 4px;
+    border-bottom: 1px solid lighten($gray-light, 30);
+    content: "";
+    margin-bottom: 1rem;
+  }
+}
+
+a.back-link{
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+div.index-story-list{
+  @include clearfix();
+
+  div.index-story-item{
+    @include clearfix();
+    margin-bottom: 1rem;
+
+    &:not(:first-of-type){
+      padding-top: 1rem;
+
+      border-top: thin solid $gray-lightest;
+    }
+
+    a {
+      color: $project-primary;
+      text-decoration: none;
+
+      h3{
+        color: $project-primary;
+        text-decoration: none;
+        font-size: 1.4rem;
+        margin-bottom: 0.2rem;
+
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+    div.index-story-description{
+      p{
+        font-size: 1.1rem;
+        line-height: 1.3rem;
+      }
+    }
+
+    img.index-story-photo{
+      max-height: 7rem;
+      float: left;
+      padding-right: 0.5rem;
+      padding-bottom: 0.2rem;
+    }
+  }
+}
+
+div.person-intro{
+  @include clearfix();
+
+  img.person-intro-img{
+    max-height: 10rem;
+    border-radius: 100%;
+    float:right;
+
+    @media screen and (max-width: $small-screen-width){
+      max-height: 5rem;
+    }
+
+  }
+}

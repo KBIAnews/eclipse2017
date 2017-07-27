@@ -1,0 +1,152 @@
+div.home-cards-contain{
+  padding-top: 50px;
+  width:100%;
+
+  div.home-card{
+    display: block;
+    width: 100%;
+    height: 800px;
+    //background-color: $gray-light;
+  }
+
+  div.home-card-map {
+    z-index: 49;
+  }
+
+  div.home-card-front{
+    background-color: $gray-dark;
+    background-blend-mode: multiply;
+    background: url(/static/columns-back.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    div.home-container {
+      color: $project-text-dark;
+
+      @include container;
+      max-width: 1500px !important;
+      padding: 3rem;
+
+      @media screen and (max-width: $medium-screen-width) {
+        padding: 1.5rem;
+      }
+
+      div.intro{
+        margin-top: 1rem;
+        font-size: 1.5rem;
+        max-width: 800px;
+      }
+
+      .callout {
+        h1 {
+          font-size: 3rem;
+        }
+      }
+
+
+      .red-callout{
+        color: tint($project-primary, 20%);
+      }
+
+
+      @media screen and (min-width: $medium-screen-width) {
+        .callout {
+          h1 {
+            font-size: 5rem;
+          }
+        }
+      }
+
+    }
+
+
+
+    div.vid-target{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+  }
+
+}
+
+div.home-container {
+
+  @include container;
+  max-width: 1500px !important;
+  padding: 3rem;
+
+  @media screen and (max-width: $medium-screen-width) {
+    padding: 1.5rem;
+  }
+}
+
+div.home-card-flex{
+  background-color: $gray-lighter;
+}
+
+div.story-list{
+  h1{
+    font-size: 3.5rem;
+    padding-bottom: 0.3em;
+
+    @media screen and (max-width: $medium-screen-width) {
+      font-size: 2.5rem;
+    }
+
+    @media screen and (max-width: $small-screen-width) {
+      padding-top: 1rem;
+      font-size: 2.2rem;
+    }
+
+    @media screen and (max-width: $tiny-screen-width) {
+      padding-top: 0rem;
+      font-size: 2.0rem;
+
+      &:after{
+        padding-top: 8px;
+      }
+    }
+
+
+    &:after{
+      display: table;
+      width:120px;
+      padding-top: 10px;
+      border-bottom: 8px solid $project-primary;
+      content: "";
+    }
+  }
+}
+
+
+div.link-button-block{
+  margin-top: 1rem;
+  font-weight: lighter;
+  font-size: 1.2rem;
+
+
+  a.home-button {
+
+    color : $project-text-dark;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.2rem;
+    padding-top: 0.2rem;
+    text-decoration: none;
+    border: solid $project-primary 1px;
+
+
+
+    &:hover{
+      background-color: $project-primary;
+      color: $project-text-dark;
+    }
+  }
+}
+
