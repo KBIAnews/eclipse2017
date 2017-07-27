@@ -1,0 +1,31 @@
+$eclipse-map-land: #302f2e;
+$eclipse-map-background: #191a1a;
+
+div.background-map{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: $eclipse-map-background;
+}
+
+div.app-body{
+  position: absolute;
+  top: 100px;
+  left: 50px;
+
+  color: $project-text-dark;
+
+  background-color: rgba($eclipse-map-background, 0.3);
+
+  input[type=text]{
+    background-color: rgba($eclipse-map-land, 0.01);
+    color: $project-text-dark;
+  }
+}
+
+div.text{
+  position: absolute;
+  background-color: $project-background-light;
+  top: 1400px;
+}

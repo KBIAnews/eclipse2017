@@ -5,6 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <script src="https://use.fontawesome.com/4cfb4dfef7.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
@@ -44,16 +46,7 @@
             -0.00402530,    0.00012346,   -0.00001172,
             0.00462223,    0.00459921
         );
-
         /* End Besselian Elements */
-
-        // Columbia Lat and Long
-        var long = 38.966014,
-            lat = -92.283495;
-
-        // Almaty Lat and Long for Testing Edge Case
-        // var long = 43.2220,
-        //     lat = 76.8512;
     </script>
     <script src="js/app.js"></script>
 </head>
@@ -69,6 +62,12 @@
     <input type="text" class="form-control" id="location-search" placeholder="Location Search" aria-describedby="basic-addon2">
         <button type="submit" id="query-button">Check Location</button>
     </form>
+</div>
+
+<div class="text">
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+</div>
+
 <div id="nav-scr" class="overlay">
 
     <!-- Button to close the overlay navigation -->
@@ -81,8 +80,7 @@
 
 </div>
 
-<script type="text/javascript">
-    console.log(loc_circ_obj(long,lat));
-</script>
+<div class="background-map" id="background-map"></div>
+
 </body>
 </html>

@@ -9,6 +9,7 @@ input[type=text] {
   border-right: none;
   font-size: 16pt;
   border-bottom-color: $project-primary;
+
 }
 
 #query-button {
@@ -16,4 +17,5 @@ input[type=text] {
 
   font-size: 16pt;
   background: none;
+  color: $project-text-dark;
 }
