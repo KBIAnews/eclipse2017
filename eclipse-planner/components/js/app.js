@@ -6,7 +6,11 @@ var mapzen_api_key = 'mapzen-AEaxs5f';
 
 
 $(document).ready(function(){
+    $('.locationSearch').submit(function(event){
+       event.preventDefault();
 
+       checkLocation(event);
+    });
 });
 
 function checkLocation(event) {
