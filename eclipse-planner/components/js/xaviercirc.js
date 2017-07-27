@@ -407,7 +407,7 @@ function padDigits(n, totalDigits) {
    n = n.toString();
    var pd = '';
    if (totalDigits > n.length) {
-      for (i = 0; i < (totalDigits - n.length); i ++)
+      for (var i = 0; i < (totalDigits - n.length); i ++)
          pd += '0';
    }
    return pd + n.toString();
@@ -424,7 +424,7 @@ function getdate(circumstances) {
 
    var nvPairs = searchString.split("&");
 
-   for (i = 0; i < nvPairs.length; i++) {
+   for (var i = 0; i < nvPairs.length; i++) {
       var nvPair = nvPairs[i].split("=");
       var name = nvPair[0];
       var value = nvPair[1];
@@ -469,7 +469,7 @@ function getdate(circumstances) {
       y = c - 4716;
    else if (m == 1 || m == 2)
       y = c - 4715;
-   timediff = t - 24 * (day - Math.floor(day)); // present time minus UT at GE
+   var timediff = t - 24 * (day - Math.floor(day)); // present time minus UT at GE
    if (timediff < -12)
       day ++;
    else if (timediff > 12)

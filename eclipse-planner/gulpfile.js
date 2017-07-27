@@ -53,7 +53,7 @@ gulp.task('upload', shell.task([
 	'aws s3 cp build s3://apps.kbia.org/eclipse-planner --recursive --profile kbia'
 ]));
 
-gulp.task('build', ['img', 'js', 'html']);
+gulp.task('build', ['img', 'js', 'html', 'sass']);
 
 gulp.task('deploy', ['build', 'upload']);
 
@@ -63,9 +63,10 @@ gulp.task('watch',function(){
 	gulp.watch('components/**/*.js',['js']);
 	gulp.watch('components/**/*.html',['html']);
 	gulp.watch('components/**/*.jpg',['img']);
+    gulp.watch('components/**/*.scss',['sass']);
 });
 
-gulp.task('serve',function(){
+gulp.task('serve',['build'], function(){
 	gutil.log('Gulp will say that this task has finished, but don\'t believe its dirty lies.');
 	gutil.log('Hit \^c to actually exit watch mode.');
 	gulp.src('build')
@@ -77,4 +78,5 @@ gulp.task('serve',function(){
 	gulp.watch('components/**/*.js',['js']);
 	gulp.watch('components/**/*.html',['html']);
 	gulp.watch('components/**/*.jpg',['img']);
+    gulp.watch('components/**/*.scss',['sass']);
 });
