@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script type="text/javascript" src="xaviercirc.js"></script>
+  <script type="text/javascript">
+  /* Start Besselian Elements */
+    var elements = new Array(
+      //*** #0U - Input Besselian Elements here
+      2457987.268521,  18.0,  -4.0,   4.0,    68.4,
+      -0.12957627,    0.54064089,   -0.00002930,   -0.00000809,
+      0.48541746,   -0.14163940,   -0.00009049,    0.00000205,
+      11.86696720,   -0.01362158,   -0.00000249,
+      89.24544525,   15.00393677,    0.00000149,
+      0.54211175,    0.00012407,   -0.00001177,
+      -0.00402530,    0.00012346,   -0.00001172,
+      0.00462223,    0.00459921
+      );
+
+    /* End Besselian Elements */
+
+    // Columbia Lat and Long
+    var long = 38.966014,
+    lat = -92.283495;
+
+    // Almaty Lat and Long for Testing Edge Case
+    // var long = 43.2220,
+    //     lat = 76.8512;
+      </script>
+    </head>
+    <body>
+
+      <script type="text/javascript">
+        document.write(loc_circ_obj(long,lat));
+        console.log(loc_circ_obj(long,lat));
+      </script>
+    </body>
+    </html>
