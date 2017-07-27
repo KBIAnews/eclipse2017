@@ -20,7 +20,7 @@ $(document).ready(function(){
 function loadMap(){
     map = L.map('background-map',{
         center: [38.9517, -92.3341],
-        zoom: 4,
+        zoom: 5,
         dragging: true,
         doubleClickZoom: false,
         zoomControl: false,

@@ -16,11 +16,44 @@ div.app-body{
 
   color: $project-text-dark;
 
-  background-color: rgba($eclipse-map-background, 0.3);
+  background-color: rgba($eclipse-map-background, 0.7);
 
   input[type=text]{
     background-color: rgba($eclipse-map-land, 0.01);
     color: $project-text-dark;
+  }
+
+  button {
+    float: right;
+  }
+
+  div.app-front{
+    h1 {
+      font-size: 3rem;
+      max-width: 600px;
+
+
+      &:after{
+        display: table;
+        width:70px;
+        padding-top: 10px;
+        border-bottom: 6px solid $project-primary;
+        content: "";
+      }
+    }
+
+    h2.author{
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: darken($project-text-dark, 30%);
+    }
+
+    p{
+      margin-top: 1rem;
+      max-width: 600px;
+      font-size: 1.1rem;
+      line-height: 1.3rem;
+    }
   }
 }
 
