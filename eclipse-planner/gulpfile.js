@@ -4,6 +4,7 @@ var gulp = require('gulp'),
 	shell = require('gulp-shell'),
 	webserver = require('gulp-webserver'),
 	flatten = require('gulp-flatten'),
+	babel = require('gulp-babel')
     uglify = require('gulp-uglify'),
 	path = require('path');
 
@@ -30,7 +31,10 @@ gulp.task('img', function(){
 
 gulp.task('js', function(){
 	return gulp.src('components/js/**/*.js')
-		.pipe(uglify())
+		.pipe(babel({
+			presets: ['es2015']
+		}))
+		// .pipe(uglify())
 	.pipe(gulp.dest('build/js'));
 });
 
