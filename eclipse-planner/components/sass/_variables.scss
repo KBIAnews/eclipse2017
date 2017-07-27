@@ -1,0 +1,26 @@
+// Base Colors
+$kbia-blue : #006AF3;
+$kbia-tf-red: #d9534f;
+$kbia-bold-purple: #613d7c;
+
+$gray-dark:                 #292b2c !default;
+$gray:                      #464a4c !default;
+$gray-light:                #636c72 !default;
+$gray-lighter:              #eceeef !default;
+$gray-lightest:             #f7f7f9 !default;
+
+// Project Colors
+$project-primary : $kbia-blue;
+$project-background-light: #fff;
+$project-background-dark: $gray-dark;
+$project-text-light: $gray-dark;
+$project-text-dark: $gray-lightest;
+
+$project-background: $project-background-light;
+$project-text: $project-text-light;
+
+// Media Query Variables
+
+$medium-screen-width: 800px;
+$small-screen-width: 600px;
+$tiny-screen-width: 500px;

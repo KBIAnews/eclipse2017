@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <script src="https://use.fontawesome.com/4cfb4dfef7.js"></script>
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-24704798-11', 'auto');
+      ga('create', 'UA-71696131-1', 'auto', 'appsTracker');
+      ga('send', 'pageview');
+      ga('appsTracker.send', 'pageview');
+
+  </script>
+  <script>
+      function openNav() {
+          document.getElementById("nav-scr").style.width = "100%";
+      }
+
+      function closeNav() {
+          document.getElementById("nav-scr").style.width = "0%";
+      }
+  </script>
+  <script type="text/javascript" src="js/xaviercirc.js"></script>
+  <script type="text/javascript">
+    /* Start Besselian Elements */
+    var elements = new Array(
+        //*********** Besselian Elements here
+        2457987.268521,  18.0,  -4.0,   4.0,    68.4,
+        -0.12957627,    0.54064089,   -0.00002930,   -0.00000809,
+        0.48541746,   -0.14163940,   -0.00009049,    0.00000205,
+        11.86696720,   -0.01362158,   -0.00000249,
+        89.24544525,   15.00393677,    0.00000149,
+        0.54211175,    0.00012407,   -0.00001177,
+        -0.00402530,    0.00012346,   -0.00001172,
+        0.00462223,    0.00459921
+    );
+
+    /* End Besselian Elements */
+
+    // Columbia Lat and Long
+    var long = 38.966014,
+        lat = -92.283495;
+
+    // Almaty Lat and Long for Testing Edge Case
+    // var long = 43.2220,
+    //     lat = 76.8512;
+  </script>
+</head>
+<body>
+
+<header class="kbia-top" aria-hidden="true">
+  <a aria-hidden="true" href="http://www.kbia.org"><img class="logo" src="https://s3.amazonaws.com/media.kbia.org/logos/kbia-blue.png" alt="KBIA Logo"></a>
+  <a aria-hidden="true" onclick="openNav()" class="btn btn-inverse btn-outline-primary float-right nav-trigger-button"><i class="fa fa-bars" aria-hidden="true"></i><span class="hidden-sm-down"> MENU</span></a>
+</header>
+
+<div id="nav-scr" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="overlay-content">
+    <a href="http://www.kbia.org">Return to KBIA</a>
+  </div>
+
+</div>
+
+<script type="text/javascript">
+    document.write(loc_circ_obj(long,lat));
+    console.log(loc_circ_obj(long,lat));
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "eclipse-planner",
+  "version": "1.0.0",
+  "description": "KBIA eclipse planner news app.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": "Nathan Lawrence",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-flatten": "^0.3.1",
+    "gulp-shell": "^0.6.3",
+    "gulp-uglify": "^3.0.0",
+    "gulp-webserver": "^0.9.1",
+    "pump": "^1.0.2"
+  }
+}
