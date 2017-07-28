@@ -14,14 +14,15 @@ $(document).ready(function(){
        checkLocation(event);
     });
     loadMap();
+    testQuad();
 });
 
 
 function loadMap(){
     map = L.map('background-map',{
-        center: [38.9517, -92.3341],
+        center: [38.9517, -96],
         zoom: 5,
-        dragging: true,
+        dragging: false,
         doubleClickZoom: false,
         zoomControl: false,
         scrollWheelZoom: false
@@ -53,6 +54,54 @@ function checkLocation(event) {
 
         map.flyTo([location.lat, location.long], 8);
 
-        $('.app-body').append(html);
+        $('#app-front')
+            .addClass('anim-hide')
+            .removeClass('anim-show');
+        $('#app-result')
+            .append(html)
+            .addClass('anim-show')
+            .removeClass('anim-hide');
     });
 };
+
+function quadraticCoeFromThree(d,e,f){
+    var x_1 = d[0],
+        y_1 = d[1],
+        x_2 = e[0],
+        y_2 = e[1],
+        x_3 = f[0],
+        y_3 = f[1];
+
+    var arr = [];
+
+
+    // Coefficient a
+    arr.push(
+        ((x_3)*(y_2- y_1) + x_2*(y_1 - y_3) + x_1*(y_3 - y_2))/
+        ((x_1 - x_2) * (x_1 - x_3) * (x_2 - x_3))
+    );
+
+    // Coefficient b
+    arr.push(
+        ((Math.pow(x_1, 2)*(y_2-y_3))+(Math.pow(x_3, 2)*(y_1-y_2))+(Math.pow(x_2, 2)*(y_3-y_1)))/
+        ((x_1 - x_2)*(x_1-x_3)*(x_2-x_3))
+    );
+
+    // Coefficient c
+    arr.push(
+        ((Math.pow(x_2, 2)*(x_3*y_1 - x_1*y_3)) + x_2*(Math.pow(x_1, 2)*y_3 - Math.pow(x_3, 2)*y_1) + (x_1*x_3*(x_3 - x_1)*(y_2)))/
+        ((x_1 - x_2)*(x_1 - x_3)*(x_2-x_3))
+    );
+
+    return arr;
+}
+
+function quadratic(co, x){
+    return (co[0] * Math.pow(x, 2) + x*co[1] + co[2]);
+}
+
+function testQuad(){
+    var co = quadraticCoeFromThree([3,3],[6,12],[9,27]);
+    console.log(co);
+    console.log(quadratic(co,9));
+}

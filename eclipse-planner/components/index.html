@@ -58,14 +58,17 @@
 </header>
 
 <div class="app-body container">
-    <div class="app-panel app-front">
+    <div class="app-panel">
         <h1>Discover Your Eclipse Experience</h1>
+        <div id="app-front" class="app-card">
         <p>Many residents of central Missouri will be able to experience what's referred to as a "total eclipse," when the moon completely hides the sun, but everyone in the continental United States will have at least a partial version of the eclipse. Use our tool to learn what you'll experience and schedule the big day.</p>
         <!--<h2 class="author">by Nathan Lawrence - August 31, 2017</h2>-->
         <form class="locationSearch">
-            <input type="text" class="form-control" id="location-search" placeholder="Search for Your Location" aria-describedby="basic-addon2">
+            <input type="text" class="form-control" autocomplete="off" id="location-search" placeholder="Search for Your Location" aria-describedby="basic-addon2">
             <button type="submit" id="query-button">Check Location</button>
         </form>
+        </div>
+        <div id="app-result" class="app-card init-hidden"></div>
     </div>
 </div>
 

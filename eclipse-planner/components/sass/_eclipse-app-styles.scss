@@ -27,20 +27,23 @@ div.app-body{
     float: right;
   }
 
-  div.app-front{
-    h1 {
-      font-size: 3rem;
-      max-width: 600px;
+  h1 {
+    font-size: 3rem;
+    max-width: 600px;
 
 
-      &:after{
-        display: table;
-        width:70px;
-        padding-top: 10px;
-        border-bottom: 6px solid $project-primary;
-        content: "";
-      }
+    &:after{
+      display: table;
+      width:70px;
+      padding-top: 10px;
+      border-bottom: 6px solid $project-primary;
+      content: "";
     }
+  }
+
+  div.app-card{
+    @include clearfix;
+
 
     h2.author{
       margin-top: 1rem;
@@ -61,4 +64,71 @@ div.text{
   position: absolute;
   background-color: $project-background-light;
   top: 1400px;
+}
+
+div.app-card{
+
+  @keyframes shrinkHideCard {
+    from {
+        max-height: 1600px;
+        opacity: 1;
+    }
+    0% {
+      max-height: 1600px;
+      opacity: 1;
+    }
+    50% {
+      max-height: 1000px;
+      opacity: 0;
+    }
+    100% {
+      max-height: 0px;
+    }
+    to {
+      max-height: 0px;
+      opacity: 0;
+    }
+  }
+
+  @keyframes growShowCard {
+    from {
+      max-height: 0px;
+      opacity: 0;
+    }
+    0% {
+      max-height: 0px;
+      opacity: 0;
+    }
+    50% {
+      max-height: 400px;
+      opacity: 0;
+    }
+    75% {
+      max-height: 1600px;
+      opacity: 0.5;
+    }
+    100%{
+      opacity: 1;
+    }
+    to {
+      opacity: 1;
+      max-height: 1600px;
+    }
+  }
+
+
+
+  &.init-hidden{
+    max-height: 0;
+  }
+
+  &.anim-show {
+    max-height: 0;
+    animation: growShowCard ease-in-out 2s 1500ms forwards;
+  }
+
+  &.anim-hide {
+    max-height: 1600px;
+    animation: shrinkHideCard ease-in-out 1s 0ms forwards;
+  }
 }
