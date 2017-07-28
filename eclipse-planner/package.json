@@ -21,6 +21,7 @@
     "gulp-shell": "^0.6.3",
     "gulp-uglify": "^3.0.0",
     "gulp-webserver": "^0.9.1",
-    "pump": "^1.0.2"
+    "pump": "^1.0.2",
+    "graceful-fs": "^4.0.0"
   }
 }
