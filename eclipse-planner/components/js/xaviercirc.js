@@ -1,15 +1,7 @@
 //
 // Besselian Elements Calculator
 //
-
-/*
-Release:
-2007-07-06    Xavier Jubier, Fred Espenak, Sumit Dutta    Version for NASA's Solar Eclipse Google Maps
-2013-12-13    Xavier Jubier                               Clear marker addition, display improvements
-2014-03-09    Xavier Jubier                               Added obscuration and cleaned up/improved code
-2017-07-26    Xavier Jubier, Nathan Lawrence              Adapted for JS object use instead of HTML object creation.
-                                                          used in accordance with NASA/MIT LA.
-*/
+// Very Loosely based on previous work by Xavier Jubier for NASA
 
 /* Start Besselian Elements */
 var elements = new Array(
