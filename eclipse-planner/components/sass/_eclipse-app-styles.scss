@@ -1,5 +1,6 @@
 $eclipse-map-land: #302f2e;
 $eclipse-map-background: #191a1a;
+$eclipse-map-gold: #5f4c32;
 
 div.background-map{
   position: fixed;
@@ -11,8 +12,11 @@ div.background-map{
 
 div.app-body{
   position: absolute;
-  top: 100px;
+  top: 80px;
   left: 50px;
+
+  padding-bottom: 50px;
+  padding-top: 50px !important;
 
   color: $project-text-dark;
 
@@ -131,4 +135,50 @@ div.app-card{
     max-height: 1600px;
     animation: shrinkHideCard ease-in-out 1s 0ms forwards;
   }
+
+  p{
+
+    strong{
+      color: lighten($project-primary, 10%);
+      font-size: 1.2rem;
+    }
+
+  }
+
+  a.button {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: inline-block;
+    color: $project-text-dark;
+
+    @include outline-button($project-primary);
+
+    &:hover {
+
+    }
+  }
+}
+
+svg{
+  margin-top: 1em;
+  margin-bottom: 0em;
+  background: linear-gradient(to bottom, rgba($eclipse-map-gold, 0.3), rgba($eclipse-map-gold, 0));
+  path{
+    stroke: darken($project-text-dark, 20%);
+    fill: none;
+  }
+
+  line{
+    stroke: $project-text-dark;
+  }
+
+  text{
+    fill: darken($project-text-dark, 30%);
+  }
+}
+
+div#quadratic{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
