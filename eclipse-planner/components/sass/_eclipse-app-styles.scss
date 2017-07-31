@@ -10,6 +10,10 @@ div.background-map{
   background-color: $eclipse-map-background;
 }
 
+form.locationSearch{
+  @include clearfix;
+}
+
 div.app-body{
   position: absolute;
   top: 80px;
@@ -170,6 +174,33 @@ div.app-card{
 
     }
   }
+
+  div.underwriting{
+    @include clearfix;
+    margin-top: 2em;
+    margin-bottom: 1em;
+
+    p{
+      color: darken($project-text-dark, 10%);
+      font-size: 0.8em;
+      line-height: 1.1em;
+
+      margin-top: 0.5rem;
+
+      @media screen and (max-width: $small-screen-width){
+        margin-top: 0rem;
+      }
+    }
+
+
+    max-width: 600px;
+
+    img {
+      float: left;
+      margin-right: 10px;
+      max-width: 104px;
+    }
+  }
 }
 
 svg{
@@ -195,3 +226,4 @@ div#quadratic{
   margin-left: auto;
   margin-right: auto;
 }
+
