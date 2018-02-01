@@ -3,6 +3,7 @@
  */
 
 var mapzen_api_key = 'mapzen-AEaxs5f';
+var gc_api_key = 'ge-4f700b295436894f';
 
 var tz_api_key = 'AIzaSyAkMigHh0ygs873s_iGIk_3ScAt-0tW_fY';
 
@@ -38,7 +39,7 @@ function loadMap(){
 
 function checkLocation(event) {
     var searchText = improveLocationInput($('#location-search').val());
-    d3.json(`https://search.mapzen.com/v1/search?text=${searchText}&api_key=${mapzen_api_key}`, function (d) {
+    d3.json(`https://api.geocode.earth/v1/search?text=${searchText}&api_key=${gc_api_key}`, function (d) {
 
         let loc = d.features[0];
         console.log(d.features[0]);
